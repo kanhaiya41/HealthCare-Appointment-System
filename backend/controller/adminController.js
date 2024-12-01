@@ -8,7 +8,7 @@ import { CompletedMeetings } from "../model/completedMeetings.js";
 export const newDoctor = async (req, res) => {
     try {
         const { name, email, mobile, password, address, des } = req.body;
-        const ProfilePicture = `${process.env.BACKEND_URL}/file/${req.file.originalname}`;
+        const ProfilePicture = `https://healthcare-appointment-system-6bpz.onrender.com/file/${req.file.originalname}`;
 
         const user = await Doctor.findOne({ email });
 
@@ -199,7 +199,7 @@ export const editProfile = async (req, res) => {
             message = 'Account Updated';
         }
         if (image) {
-            const imageUrl = `${process.env.BACKEND_URL}/file/${req.file.originalname}`;
+            const imageUrl = `https://healthcare-appointment-system-6bpz.onrender.com/file/${req.file.originalname}`;
             const uimage = await Doctor.findByIdAndUpdate(id, { ProfilePicture: imageUrl });
             success = true;
             message = 'Account Updated';
