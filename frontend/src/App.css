@@ -1,0 +1,752 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homebody {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Loader {
+  margin-right: 12px;
+  height: 30px;
+  width: 30px;
+  animation: spin linear 2s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* navbar */
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: .3vh 5vw .1vh 2vw;
+  box-shadow: 0 0 0 .01vw;
+  align-items: center;
+}
+
+.nav div {
+  display: flex;
+  gap: 25vw;
+}
+
+.nav img {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 5px;
+}
+
+.nav h3 {
+  cursor: pointer;
+}
+
+/* end navbar */
+
+/* home  */
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../public/img/homeback.jpg');
+  background-size: 100% 90%;
+}
+
+.home .homecontainer {
+  padding: 30vh 0 0 12vw;
+  ;
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+}
+
+.home .homecontainer h2 {
+  color: #000000;
+}
+
+.home .homecontainer h3 {
+  color: #FFFFFF;
+}
+
+.home .homecontainer h4 {
+  color: #FFD700;
+}
+
+.home button {
+
+  padding: 1vw;
+  background: aquamarine;
+  border: none;
+  border-radius: 5px;
+  width: 10vw;
+  font-size: 14px;
+}
+
+.home button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* end home  */
+
+/* appointment.js */
+.fillbl {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.appointment-panel {
+  width: 90%;
+  max-width: 500px;
+  margin: 15px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-panel h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.appointment-panel button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.appointment-panel button:hover {
+  background-color: #2980b9;
+}
+
+/* end appointment.js */
+
+/* Doctor.js */
+
+.doctorpanelbody {
+  position: relative;
+}
+
+.profile {
+  background: rgb(177, 232, 213);
+  width: fit-content;
+  padding: 2vh;
+  margin: 2vh;
+  border-radius: 5px;
+  position: fixed;
+  right: 0;
+}
+
+.profile img {
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
+}
+
+.profile button {
+  padding: .7vh;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.work {
+  padding-top: 5%;
+}
+
+.avstock {
+  margin-left: 15%;
+  font-weight: 500;
+}
+
+.tabled {
+  width: 90%;
+  padding-left: 14%;
+  text-align: center;
+  height: 30vh;
+  overflow-y: scroll;
+  font-weight: lighter;
+
+}
+
+.sotable {
+  width: 80%;
+  box-shadow: rgb(216, 206, 206) 0.1vh 0.5vh;
+
+}
+
+.table-data,
+.table-head {
+  padding: 1.5%;
+  border-bottom: #e6dfdf solid 0.1vh;
+}
+
+.table-th {
+  background-color: rgb(177, 232, 213);
+  color: rgb(33, 33, 33);
+}
+
+/* end doctor.js */
+
+/* DoctorCard.js */
+
+.card {
+  background: rgb(177, 232, 213);
+  width: fit-content;
+  padding: 3vh;
+  margin: 3vh;
+}
+
+.card img {
+  height: 50vh;
+  width: 40vh;
+}
+
+.card button {
+  padding: 1vh;
+}
+
+.card div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1vh;
+}
+
+/* end DoctorCard.js */
+
+/* doctorInfo.js */
+
+.doctorbody .dpanel {
+  background: rgb(177, 232, 213);
+  color: rgb(33, 33, 33);
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dpanel h1 {
+  cursor: pointer;
+  width: fit-content;
+
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* end doctorsInfo.js */
+
+/* doctodetails */
+
+.doctorDetailsbody {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5vh;
+}
+
+.doctorDetailsbody div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctorDetailsbody div button {
+  /* background: silver; */
+  width: 99%;
+  text-align: center;
+  margin-right: 1%;
+  padding: 1%;
+  border: none;
+  font-size: large;
+}
+
+.des {
+  margin: 5vh 7vw 0 7vw;
+}
+
+.back {
+  width: 99%;
+  text-align: center;
+  margin-right: 1%;
+  padding: 1%;
+  border: none;
+  font-size: large;
+  cursor: pointer;
+}
+
+/* end doctordetails */
+
+/* signin */
+
+@keyframes dropDown {
+  0% {
+    transform: translate(-50%, -200%);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translate(-50%, 30%);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translate(-50%, 20%);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.sign-in-box {
+  top: 40%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: none;
+  width: 23%;
+  position: fixed;
+
+}
+
+.sign-in-box span {
+  position: absolute;
+  right: 12%;
+  cursor: pointer;
+}
+
+.sign-in-box.animate {
+  animation: dropDown 1s ease-out;
+}
+
+/* end signin */
+
+@media (max-width:600px) {
+
+
+
+  .Loader {
+    margin-right: 12px;
+    height: 30px;
+    width: 30px;
+    animation: spin linear 2s infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* navbar */
+
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: .5vh 5vw 0 .1vh;
+    box-shadow: 0 0 0 .01vw;
+    align-items: center;
+    gap: 5vw;
+  }
+
+  .nav div {
+    display: flex;
+    gap: 15vw;
+  }
+
+  .nav img {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 5px;
+  }
+
+  .nav h3 {
+    cursor: pointer;
+  }
+
+  /* end navbar */
+
+  /* home  */
+  .homebody {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .home {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../public/img/homeback.jpg');
+    background-size: 100% 90%;
+  }
+
+  .home .homecontainer {
+    padding: 25vh 0 0 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+  }
+
+  .home .homecontainer h2 {
+    color: #000000;
+  }
+
+  .home .homecontainer h3 {
+    color: #FFFFFF;
+  }
+
+  .home .homecontainer h4 {
+    color: #FFD700;
+  }
+
+  .home button {
+
+    padding: 1vw;
+    margin-left: 5vw;
+    background: aquamarine;
+    border: none;
+    border-radius: 5px;
+    width: 15vh;
+    font-size: 14px;
+  }
+
+  .home button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  /* end home  */
+
+  /* appointment.js */
+  .fillbl {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .appointment-panel {
+    width: 90%;
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .appointment-panel h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .appointment-panel button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .appointment-panel button:hover {
+    background-color: #2980b9;
+  }
+
+  /* end appointment.js */
+
+  /* Doctor.js */
+
+  .doctorpanelbody {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .profile {
+    background: rgb(177, 232, 213);
+    width: fit-content;
+    padding: 2vh;
+    border-radius: 5px;
+    position: fixed;
+  }
+
+  .profile img {
+    height: 20vh;
+    width: fit-content;
+    border-radius: 0%;
+  }
+
+  .fullwork{
+    margin-top: 40vh;
+  }
+
+  .profile button {
+    padding: .7vh;
+    width: 100%;
+    margin-top: 10%;
+  }
+
+  .work {
+    padding-top: 5%;
+  }
+
+  .avstock {
+    margin-left: 0;
+    font-weight: 500;
+  }
+
+  .tabled {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    height: fit-content;
+    overflow-y: scroll;
+    font-weight: lighter;
+
+  }
+
+  .sotable {
+    width: 100%;
+    box-shadow: rgb(216, 206, 206) 0.1vh 0.5vh;
+
+  }
+
+  .table-data,
+  .table-head {
+    padding: 0%;
+    border-bottom: #e6dfdf solid 0.1vh;
+  }
+
+  .table-th {
+    background-color: rgb(177, 232, 213);
+    color: rgb(33, 33, 33);
+  }
+
+  /* end doctor.js */
+
+  /* DoctorCard.js */
+
+  .card {
+    background: rgb(177, 232, 213);
+    width: fit-content;
+    padding: 3vh;
+    margin: 3vh;
+  }
+
+  .card img {
+    height: 50vh;
+    width: 40vh;
+  }
+
+  .card button {
+    padding: 1vh;
+  }
+
+  .card div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vh;
+  }
+
+  /* end DoctorCard.js */
+
+  /* doctorInfo.js */
+
+  .doctorbody .dpanel {
+    background: rgb(177, 232, 213);
+    color: rgb(33, 33, 33);
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dpanel h1 {
+    cursor: pointer;
+    width: fit-content;
+
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* end doctorsInfo.js */
+
+  /* doctodetails */
+
+  .doctorDetailsbody {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5vh;
+  }
+
+  .doctorDetailsbody div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doctorDetailsbody div button {
+    /* background: silver; */
+    width: 99%;
+    text-align: center;
+    margin-right: 1%;
+    padding: 1%;
+    border: none;
+    font-size: large;
+  }
+
+  .des {
+    margin: 5vh 7vw 0 7vw;
+  }
+
+  .back {
+    width: 99%;
+    text-align: center;
+    margin-right: 1%;
+    padding: 1%;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+  }
+
+  /* end doctordetails */
+
+  /* signin */
+
+  @keyframes dropDown {
+    0% {
+      transform: translate(-50%, -200%);
+      opacity: 0;
+    }
+
+    60% {
+      transform: translate(-50%, 30%);
+      opacity: 1;
+    }
+
+    80% {
+      transform: translate(-50%, 20%);
+    }
+
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .sign-in-box {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: none;
+    width: 100%;
+    position: fixed;
+
+  }
+
+  .sign-in-box span {
+    position: absolute;
+    right: 12%;
+    cursor: pointer;
+  }
+
+  .sign-in-box.animate {
+    animation: dropDown 1s ease-out;
+  }
+
+  /* end signin */
+}
